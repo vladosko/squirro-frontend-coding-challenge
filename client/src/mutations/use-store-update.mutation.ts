@@ -1,7 +1,5 @@
-import { useCallback } from "react";
 import { useMutation, useQueryClient } from "react-query";
 import { Store } from "../models/store.model";
-import { WebApi } from "../models/web-api.model";
 import { StoresApiService } from "../services/stores-api.service";
 
 export const useStoreUpdateMutation = () => {

@@ -5,3 +5,5 @@
 #### Running Client:
 - `cd` inside `client` folder and run `npm install`
 - Start client dev server on port 3001 by running `npm run start`
+
+#### Run the API server first, then the client dev server.

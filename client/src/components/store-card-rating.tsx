@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import { useRatingsArray } from "../hooks/use-ratings-array.hook";
 import "./store-card-rating.css";
 
