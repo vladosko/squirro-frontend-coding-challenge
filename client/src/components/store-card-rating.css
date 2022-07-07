@@ -1,0 +1,14 @@
+.rating {
+  display: flex;
+  flex: 0;
+  align-items: flex-start;
+}
+
+.rating__star {
+  color: goldenrod;
+}
+
+
+.rating__star:hover {
+  cursor: pointer;
+}

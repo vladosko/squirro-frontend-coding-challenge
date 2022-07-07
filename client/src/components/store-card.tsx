@@ -1,11 +1,15 @@
 import dayjs from "dayjs";
 import React from "react";
+import { useHandleRatingChange } from "../hooks/use-handle-rating-change.hook";
 import { Store } from "../models/store.model";
+import { StoreCardRating } from "./store-card-rating";
 import "./store-card.css";
 
 export const StoreCard: React.FC<{
   store: Store;
 }> = ({ store }) => {
+  const handleRatingChange = useHandleRatingChange(store);
+
   return (
     <div className="store-card">
       <div className="store-card__main">
@@ -17,7 +21,10 @@ export const StoreCard: React.FC<{
         <div className="store-card__content">
           <div className="store-card__header">
             <h2 className="store-card__title">{store.attributes.name}</h2>
-            <span>{store.attributes.rating}</span>
+            <StoreCardRating
+              rating={store.attributes.rating}
+              onRatingClick={handleRatingChange}
+            />
           </div>
           <div className="store-card__subtitle">Best-selling books</div>
           <div className="books-grid">
