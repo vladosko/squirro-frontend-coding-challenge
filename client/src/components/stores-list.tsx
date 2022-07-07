@@ -1,4 +1,5 @@
 import { useStoresQuery } from "../queries/use-stores.query";
+import { StoreCard } from "./store-card";
 
 import "./stores-list.css";
 
@@ -8,7 +9,7 @@ export const StoresList: React.FC = () => {
   return (
     <div className="store-card-list">
       {stores.map((store) => {
-        return <h1>{store.id}</h1>;
+        return <StoreCard key={store.id} store={store} />;
       })}
     </div>
   );

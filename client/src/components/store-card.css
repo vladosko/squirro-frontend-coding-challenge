@@ -1,0 +1,108 @@
+.store-card {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  margin-bottom: 1rem;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.store-card__image {
+  margin-left: auto;
+  flex-shrink: 0;
+  object-fit: cover;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .store-card__image {
+    width: 14rem;
+    height: 14rem;
+  } 
+}
+
+.store-card__main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  .store-card__main {
+    flex-direction: row;
+  }
+  .store-card__image {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  } 
+}
+
+.store-card__content {
+  flex:1;
+  display: flex;
+  flex-direction: column;
+}
+
+.store-card__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.store-card__title {
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.store-card__subtitle {
+  background-color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.store-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.store-card__country-flag {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.books-grid {
+  flex: 1 1 auto;
+  display: grid;
+  grid-auto-flow: row ;
+  grid-auto-rows: max-content;
+  row-gap: 0.5rem;
+  max-height: 8.5rem;
+  overflow-y: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e4e4e4;
+}
+
+.books-grid__book {
+  grid-column: 1/2;
+  padding-right: 1rem;
+}
+
+.books-grid__author {
+  grid-column: 2/3;
+}
+
+.books-grid__cell {
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
